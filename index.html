@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Number</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <h1>Guess The Number!</h1>
+        </header>
+
+        <main>
+            <div>
+                <div class="section show" id="start">
+                <button id="startBtn">Start game</button>
+                </div>
+
+                <div id="gameForm" class="section">
+                <form id="guessForm" novalidate>
+                    <div class="row">
+                    <div>
+                        <label for="guessInput">Your guess <br></label>
+                        <input
+                        type="text"
+                        name="guessInput"
+                        id="guessInput"
+                        inputmode="numeric"
+                        pattern="[0-9]*"
+                        placeholder="Input number"
+                        />
+                    </div>
+
+                    <button id="submitBtn" type="submit">Submit</button>
+                    <button id="restartBtn" type="button" style="display: none;">Try again</button>
+                    </div>
+
+                    <div class="hint" id="hintBox">
+                    <span id="hintText">Start guessing</span>
+                    <span id="attemptPill">Attempt: 0</span>
+                    </div>
+                </form>
+                </div>
+
+                <aside>
+                <div>
+                    <h2>History</h2>
+                    <div id="historyList" class="history"></div>
+                </div>
+                </aside>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
