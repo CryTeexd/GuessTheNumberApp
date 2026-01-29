@@ -1,58 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="cs">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guess The Number</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guess The Number App</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="script.js"></script>
 </head>
 <body>
-    <div class="wrap">
-        <header>
-            <h1>Guess The Number!</h1>
-        </header>
+  <div class="wrap">
+    <header>
+      <h1>Guess The Number App</h1>
+    </header>
 
-        <main>
-            <div>
-                <div class="section show" id="start">
-                <button id="startBtn">Start game</button>
-                </div>
+    <main>
+      <section id="startSection" class="section show">
+        <button id="startBtn" type="button">Start game</button>
+      </section>
 
-                <div id="gameForm" class="section">
-                <form id="guessForm" novalidate>
-                    <div class="row">
-                    <div>
-                        <label for="guessInput">Your guess<br></label>
-                        <input
-                        type="text"
-                        name="guessInput"
-                        id="guessInput"
-                        inputmode="numeric"
-                        pattern="[0-9]*"
-                        placeholder="Input number"
-                        />
-                    </div>
+      <section id="gameSection" class="section">
+        <form id="guessForm" novalidate>
+          <label for="guessInput">Your guess</label>
+          <div class="row">
+            <input
+              id="guessInput"
+              type="text"
+              inputmode="numeric"
+              pattern="[0-9]*"
+              placeholder="Zadej číslo 1–100"
+            />
+            <button id="submitBtn" type="submit">Submit</button>
+            <button id="restartBtn" type="button" style="display:none;">Try again</button>
+          </div>
 
-                    <button id="submitBtn" type="submit">Submit</button>
-                    <button id="restartBtn" type="button" style="display: none;">Try again</button>
-                    </div>
+          <p id="resultText" class="result">Start guessing</p>
+          <p class="attempts">Attempt: <span id="attemptCount">0</span></p>
+        </form>
+      </section>
 
-                    <div class="hint" id="hintBox">
-                    <span id="hintText">Start guessing</span>
-                    <span id="attemptPill">Attempt: 0</span>
-                    </div>
-                </form>
-                </div>
-
-                <aside>
-                <div>
-                    <h2>History</h2>
-                    <div id="historyList" class="history"></div>
-                </div>
-                </aside>
-            </div>
-        </main>
-    </div>
+      <section class="historyBox">
+        <h2>Historie</h2>
+        <div id="historyList" class="historyList"></div>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
