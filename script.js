@@ -2,11 +2,10 @@ let secretNumber = null;
 let attempts = 0;
 let guesses = [];
 let gameRunning = false;
-const localStorageKey = "history";
 
+const localStorageKey = "history";
 const startSection = document.getElementById("startSection");
 const gameSection = document.getElementById("gameSection");
-
 const startButton = document.getElementById("startBtn");
 const guessForm = document.getElementById("guessForm");
 const guessInput = document.getElementById("guessInput");
@@ -48,15 +47,15 @@ function renderHistory() {
         return;
     }
 
-    items.slice().reverse().forEach(item => {
+    items.slice().reverse().forEach( (g, idx) => {
         const div = document.createElement("div");
         div.className = "historyItem";
 
-        div.innerHTML = iv.innerHTML =
+        div.innerHTML =
             "<strong>Game #" + (items.length - idx) + "</strong><br>" +
             "Secret number: <strong>" + g.secret + "</strong><br>" +
             "Attempts: <strong>" + g.attempts + "</strong><br>" +
-            "Tips: " + (g.guesses.length ? g.guesses.join(", ") : "-");
+            "Tips: " + (g.guesses && g.guesses.length ? g.guesses.join(", ") : "-");
         historyList.appendChild(div);
     });
 }
