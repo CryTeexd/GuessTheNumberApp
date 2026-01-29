@@ -1,0 +1,93 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+.section {
+  display: none;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.section.show {
+  display: block;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 10px;
+}
+
+input {
+  padding: 8px;
+  width: 160px;
+  border-radius: 6px;
+}
+
+button {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  background: #eee;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #e0e0e0;
+}
+
+.result {
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+.attempts {
+  margin-top: 6px;
+  color: #333;
+}
+
+.historyBox {
+  background: #fff;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.historyBox h2 {
+  margin: 0 0 10px 0;
+}
+
+.historyList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.historyItem {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px;
+  background: #fafafa;
+}
+
+.historyEmpty {
+  color: #777;
+}
